@@ -1,0 +1,49 @@
+# ─────────────────────────────────────────────────────────────
+# SNUBH Vibe Lab — Cookbook Registry
+#
+# 모든 레시피의 단일 진실 공급원(single source of truth).
+# 새 레시피를 추가하면 recipes/ 아래 폴더를 만들고, 여기 항목 하나를 추가하세요.
+# 이 파일에 없는 레시피는 README 인덱스/검색에 노출되지 않습니다.
+#
+# 한 항목의 필드는 각 recipe.md 의 frontmatter 와 동일해야 합니다.
+# (CI 에서 frontmatter ↔ registry 일치 여부를 검증하도록 추후 훅 추가 가능)
+# ─────────────────────────────────────────────────────────────
+
+# 공통 패턴 태그 (patterns 필드에서 사용 — 새 태그 추가 시 여기 먼저 등록)
+pattern_tags:
+  - report-qa             # 보고서·판독문 구조/준수 점검
+  - report-drafting       # 구조화된 보고서 초안 작성
+  - cohort-extraction     # 코호트·변수 추출, 차트 파싱
+  - korean-clinical-text  # 한국어 임상 텍스트 처리·OCR
+  - model-interface       # 기존 예측모델에 임상의용 자연어 인터페이스
+  - literature-synthesis  # 문헌 종합·근거 정리
+  - eval-protocol         # 평가·검증 프로토콜
+  - multi-center          # 다기관 연구 워크플로우
+  - decision-support      # 임상 의사결정 지원
+
+# 레시피 목록
+recipes:
+  - id: radiology-pirads-adherence-check
+    title: PI-RADS 보고서 준수 자동 점검
+    specialty: radiology
+    patterns: [report-qa, korean-clinical-text]
+    author: Sungil Hwang
+    tool: [claude-api]
+    model: claude-opus-4-8
+    status: draft
+    data: synthetic
+    path: recipes/radiology/pirads-adherence-check/
+    summary: 전립선 MRI 판독문이 PI-RADS 구조를 빠짐없이 따랐는지 자동 점검.
+
+  # ── 새 레시피는 위 형식으로 여기에 추가 ──
+  # - id:
+  #   title:
+  #   specialty:
+  #   patterns: []
+  #   author:
+  #   tool: []
+  #   model:
+  #   status: draft
+  #   data: synthetic
+  #   path: recipes/<specialty>/<slug>/
+  #   summary:

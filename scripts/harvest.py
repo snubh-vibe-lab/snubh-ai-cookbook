@@ -42,7 +42,9 @@ README_PATH   = ROOT / "README.md"
 REQUIRED_FIELDS = ["id", "title", "specialty", "author", "status"]
 VALID_SPECIALTIES = {
     "radiology", "cardiology", "surgery", "pathology", "gyn-onc",
-    "ent", "dentistry", "psychiatry", "oncology", "shared",
+    "ent", "dentistry", "psychiatry", "oncology",
+    "neurology", "neurosurgery", "ophthalmology", "anesthesiology",
+    "pediatrics", "rehab", "family_med", "shared",
 }
 
 BLOCK_PATTERNS = {

@@ -41,6 +41,13 @@ cookbook/
     ├── dentistry/
     ├── psychiatry/
     ├── oncology/
+    ├── neurology/
+    ├── neurosurgery/
+    ├── ophthalmology/
+    ├── anesthesiology/
+    ├── pediatrics/
+    ├── rehab/
+    ├── family_med/
     └── shared/          ← cross-specialty patterns (korean-clinical-text,
                            report-drafting, cohort-extraction, eval-protocols …)
 ```

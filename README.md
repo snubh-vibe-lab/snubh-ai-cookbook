@@ -49,6 +49,12 @@ Two axes find every recipe: **by specialty** (the folder) and **by pattern** (th
 
 ## Index
 
+<!-- COOKBOOK:INDEX:START -->
+| Recipe | Specialty | Patterns | Tool | Status |
+|---|---|---|---|---|
+| [전립선 MRI 구조화 판독문 작성 보조](recipes/radiology/radiology-gureport/) | radiology | report-drafting, korean-clinical-text | claude-api | draft |
+<!-- COOKBOOK:INDEX:END -->
+
 > Generated from `registry.yml`. (A small script can keep this table in sync — see CONTRIBUTING.)
 
 | Recipe | Specialty | Patterns | Tool | Status |

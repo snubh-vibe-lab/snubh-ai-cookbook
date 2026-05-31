@@ -23,27 +23,18 @@ pattern_tags:
 
 # 레시피 목록
 recipes:
-  - id: radiology-pirads-adherence-check
-    title: PI-RADS 보고서 준수 자동 점검
-    specialty: radiology
-    patterns: [report-qa, korean-clinical-text]
-    author: Sungil Hwang
-    tool: [claude-api]
-    model: claude-opus-4-8
-    status: draft
-    data: synthetic
-    path: recipes/radiology/pirads-adherence-check/
-    summary: 전립선 MRI 판독문이 PI-RADS 구조를 빠짐없이 따랐는지 자동 점검.
-
-  # ── 새 레시피는 위 형식으로 여기에 추가 ──
-  # - id:
-  #   title:
-  #   specialty:
-  #   patterns: []
-  #   author:
-  #   tool: []
-  #   model:
-  #   status: draft
-  #   data: synthetic
-  #   path: recipes/<specialty>/<slug>/
-  #   summary:
+- id: radiology-gureport
+  title: 전립선 MRI 구조화 판독문 작성 보조
+  specialty: radiology
+  patterns:
+  - report-drafting
+  - korean-clinical-text
+  author: Sungil Hwang
+  tool:
+  - claude-api
+  model: claude-opus-4-8
+  status: draft
+  data: synthetic
+  path: recipes/radiology/radiology-gureport/
+  source: https://github.com/hwangsi/GUreport/blob/HEAD/.cookbook/recipe.md
+  summary: ''

@@ -3,7 +3,9 @@
 id: specialty-short-slug              # 예: radiology-pirads-adherence-check (소문자, 하이픈)
 title: 한 줄 제목                       # 예: PI-RADS 보고서 준수 자동 점검
 specialty: radiology                  # radiology | cardiology | surgery | pathology |
-                                      # gyn-onc | ent | dentistry | psychiatry | oncology | shared
+                                      # gyn-onc | ent | dentistry | psychiatry | oncology |
+                                      # neurology | neurosurgery | opthalomolgy| anesthesiology |
+                                      # pediatrics | rehab | family_med | shared
 patterns: [report-qa, korean-clinical-text]   # 아래 "공통 패턴 태그" 중 1~3개
 author: Your Name
 tool: [claude-api]                    # claude-app | claude-code | claude-api | mcp (복수 가능)

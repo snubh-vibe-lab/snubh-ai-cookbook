@@ -1,0 +1,50 @@
+name: Sync cookbook
+
+# 매일 밤 org 멤버 repo들의 .cookbook/ 을 수확해 PR로 올린다.
+# 수동 실행도 가능(Actions 탭 → Run workflow).
+
+on:
+  schedule:
+    - cron: "0 18 * * *"        # 18:00 UTC = 03:00 KST 매일
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      - name: Harvest recipes from org member repos
+        env:
+          # org repo 읽기 + 이 repo PR 쓰기 권한 토큰. 아래 docs/SETUP 참고.
+          GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+          GH_ORG: snubh-vibe-lab
+          SELF_REPO: snubh-ai-cookbook
+        run: python scripts/harvest.py
+
+      - name: Open PR with synced changes
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.ORG_READ_TOKEN }}
+          branch: cookbook-sync
+          title: "🔄 Cookbook sync — recipes from member repos"
+          commit-message: "chore: sync recipes from member .cookbook/ folders"
+          body: |
+            자동 수확 결과입니다. 멤버 repo들의 `.cookbook/` 에서 모은 레시피로
+            `recipes/`, `registry.yml`, `README` 인덱스를 갱신했습니다.
+
+            - PHI/secret 게이트를 통과한 레시피만 포함됩니다.
+            - 차단된 레시피가 있으면 위 harvest 단계 로그가 빨갛게 표시됩니다.
+
+            머지 전 한 번만 훑어봐 주세요.
+          delete-branch: true

@@ -64,11 +64,7 @@ Two axes find every recipe: **by specialty** (the folder) and **by pattern** (th
 
 > Generated from `registry.yml`. (A small script can keep this table in sync — see CONTRIBUTING.)
 
-| Recipe | Specialty | Patterns | Tool | Status |
-|---|---|---|---|---|
-| [PI-RADS 보고서 준수 자동 점검](recipes/radiology/pirads-adherence-check/) | Radiology | report-qa, korean-clinical-text | API | draft |
 
-`status`: `draft` → `tested` → `validated` → `in-production`
 
 ## Using a recipe
 

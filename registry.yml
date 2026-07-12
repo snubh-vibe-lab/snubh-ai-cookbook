@@ -36,5 +36,5 @@ recipes:
   status: draft
   data: synthetic
   path: recipes/radiology/radiology-gureport/
-  source: https://github.com/hwangsi/GUreport/blob/HEAD/.cookbook/recipe.md
+  source: https://github.com/hwangsi/PIRADSreport/blob/HEAD/.cookbook/recipe.md
   summary: ''

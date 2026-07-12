@@ -11,12 +11,12 @@ tool:
 model: claude-opus-4-8
 status: draft
 data: synthetic
-source: https://github.com/hwangsi/GUreport/blob/HEAD/.cookbook/recipe.md
-synced_from: hwangsi/GUreport
+source: https://github.com/hwangsi/PIRADSreport/blob/HEAD/.cookbook/recipe.md
+synced_from: hwangsi/PIRADSreport
 ---
 
 <!-- 자동 생성. 편집은 원본 repo의 .cookbook/ 에서. -->
-<!-- 원본: https://github.com/hwangsi/GUreport/blob/HEAD/.cookbook/recipe.md -->
+<!-- 원본: https://github.com/hwangsi/PIRADSreport/blob/HEAD/.cookbook/recipe.md -->
 
 # 전립선 MRI 구조화 판독문 작성 보조
 
